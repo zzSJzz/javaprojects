@@ -1,6 +1,22 @@
 package javaprojects.atividadesDeClasse;
+
+import java.util.Scanner;
+
 public class q1 {
     public static void main(String [] args) {
-        System.out.println("Hello World");
+        Scanner x = new Scanner(System.in);
+        int salario, comissao;
+        
+        System.out.print("Digite seu salário: ");
+        salario = x.nextInt();
+
+        System.out.print("\nDigite sua comissão: ");
+        comissao = x.nextInt();
+
+        double salFinal = salario + (comissao/4);
+        System.out.print("\nSeu salário final é: R$ " + salFinal);
+        
+        x.close();
+        
     }
 }
