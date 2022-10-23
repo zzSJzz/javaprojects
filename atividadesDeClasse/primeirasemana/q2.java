@@ -1,4 +1,4 @@
-package javaprojects.atividadesDeClasse.primeirasemana;
+package javaprojects.atividadesDeClasse.primeiraSemana;
 
 import java.util.Scanner;
 

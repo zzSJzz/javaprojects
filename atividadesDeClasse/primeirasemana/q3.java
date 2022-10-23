@@ -1,11 +1,12 @@
-package javaprojects.atividadesDeClasse.primeirasemana;
+package javaprojects.atividadesDeClasse.primeiraSemana;
 
 import java.util.Scanner;
 
 public class q3 {
     public static void main(String []args) {
         Scanner input = new Scanner(System.in);
-        int salario, contas;
+        int contas;
+        double salario;
 
         System.out.println("Digite seu salário: ");
         salario = input.nextInt();
