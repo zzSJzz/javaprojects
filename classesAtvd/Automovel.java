@@ -10,7 +10,7 @@ public class Automovel {
     private String marca, cor;
 
     public String getMarca(){ return marca;}
-    public String getCor(){ return marca;}
+    public String getCor(){ return cor;}
 
     public String setMarca(String novaMarca){
         marca = novaMarca;
@@ -18,11 +18,11 @@ public class Automovel {
     }
 
     public String setCor(String novaCor){
-        marca = novaCor;
-        return marca;
+        cor = novaCor;
+        return cor;
     }
 
-    void definirVelocidadeInicial(int velocidadeInicial) {velocidade = 0; }
+    void definirVelocidadeInicial(int velocidadeInicial) {velocidade = velocidadeInicial; }
 
     void acelerar(int valor){velocidade = velocidade + valor;}
 
@@ -44,7 +44,17 @@ public class Automovel {
         Automovel automovel = new Automovel();
         automovel.definirVelocidadeInicial(automovel.velocidade);
 
-        System.out.println("O carro está parado: " + automovel.velocidade + "km/h");
+        System.out.println("Digite a marca do carro: " );
+        String novaMarca = sc.nextLine();
+        automovel.setMarca(novaMarca);
+
+        System.out.println("Digite a cor do carro: " );
+        String novaCor = sc.nextLine();
+        automovel.setCor(novaCor);
+
+        System.out.println("Marca do carro: " + automovel.getMarca() +
+                "\nCor do carro: " + automovel.getCor() +
+                "\nO carro está parado: " + automovel.velocidade + "km/h");
 
         System.out.println("Quantos km/h deseja aumentar: ");
         int valor = sc.nextInt();
