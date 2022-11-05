@@ -4,7 +4,15 @@ import java.util.Scanner;
 
 public class ContaCorrente {
     float saldo;
+    private String numero;
 
+    public String getNumero(){
+        return numero;
+    }
+    public String setNumero(String novoNumero){
+        numero = novoNumero;
+        return numero;
+    }
     void definirSaldoInicial(float saldoInicial){
         saldo = saldoInicial;
     }
