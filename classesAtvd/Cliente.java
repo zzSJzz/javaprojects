@@ -12,6 +12,14 @@ public class Cliente {
         idade = novaIdade;
     }
 
+    public String getNome(){
+        return nome;
+    }
+
+    public int getIdade(){
+        return idade;
+    }
+
     public static void main(String[] args) {
 
         Cliente cliente = new Cliente("João", 25);
