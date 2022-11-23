@@ -1,39 +1,37 @@
 package javaprojects.classesAtvd.atvd18e19.quest2;
 
 public class Data {
-    private int dia, mes, ano;
+    private final int dia;
+    private final int mes;
+    private final int ano;
 
     private String mes2;
+
+    public Data(int dia, int mes, int ano) {
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+    }
 
     public int getDia() {
         return dia;
     }
 
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
 
-    public String getMes() {
-        return mes2;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
+    public int getMes() {
+        return mes;
     }
 
     public int getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
 
     void validarData() {
 
         // Aqui ele vai verificar se os numeros adicionados estão nos padrões corretos
 
-        if (dia <= 31 & dia >= 1){
+        if (getDia() <= 31 & getDia() >= 1){
             System.out.println("Você digitou um dia válido. \n");
         }
         else {
@@ -41,7 +39,7 @@ public class Data {
             System.exit(0);
         }
 
-        if (mes <= 12 & mes >= 1){
+        if (getMes() <= 12 & getMes() >= 1){
             System.out.println("Você digitou um mês válido. \n");
         }
         else {
@@ -51,58 +49,23 @@ public class Data {
 
         //Aqui ele vai transformar o mes int em cursivo
 
-        switch (mes){
-            case 1:
-                mes2 = "Janeiro";
-                break;
-
-            case 2:
-                mes2 = "Fervereiro";
-                break;
-
-            case 3:
-                mes2 = "Março";
-                break;
-
-            case 4:
-                mes2 = "Abril";
-                break;
-
-            case 5:
-                mes2 = "Maio";
-                break;
-
-            case 6:
-                mes2 = "Junho";
-                break;
-
-            case 7:
-                mes2 = "Julho";
-                break;
-
-            case 8:
-                mes2 = "Agosto";
-                break;
-
-            case 9:
-                mes2 = "Setembro";
-                break;
-
-            case 10:
-                mes2 = "Outubro";
-                break;
-
-            case 11:
-                mes2 = "Novembro";
-                break;
-
-            case 12:
-                mes2 = "Dezembro";
-                break;
+        switch (getMes()) {
+            case 1 -> mes2 = "Janeiro";
+            case 2 -> mes2 = "Fervereiro";
+            case 3 -> mes2 = "Março";
+            case 4 -> mes2 = "Abril";
+            case 5 -> mes2 = "Maio";
+            case 6 -> mes2 = "Junho";
+            case 7 -> mes2 = "Julho";
+            case 8 -> mes2 = "Agosto";
+            case 9 -> mes2 = "Setembro";
+            case 10 -> mes2 = "Outubro";
+            case 11 -> mes2 = "Novembro";
+            case 12 -> mes2 = "Dezembro";
         }
 
 
-        if (ano <= 3000 & ano >= 0){
+        if (getMes() <= 3000 & getMes() >= 0){
             System.out.println("Você digitou um ano válido. \n");
 
         }
@@ -110,9 +73,9 @@ public class Data {
             System.out.println("Você digitou um ano inválido. \n");
             System.exit(0);
         }
-        if (ano % 400 == 0){
+        if (getAno() % 400 == 0){
             System.out.println("O ano é bissexto \n");
-        } else if (ano % 4 == 0 & ano % 100 != 0) {
+        } else if (getAno() % 4 == 0 & getAno() % 100 != 0) {
             System.out.println("O ano é bissexto \n");
         }
         else {
@@ -121,7 +84,7 @@ public class Data {
     }
 
     public String toString(){
-        return getDia() + " de " + getMes() + " de " + getAno();
+        return getDia() + " de " + getMes() + " de " + mes2 + " de " + getAno();
     }
 
 

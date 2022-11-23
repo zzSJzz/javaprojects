@@ -4,22 +4,18 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Data data = new Data();
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Data \n" +
-                "Digite o dia: ");
+        System.out.print("Digite a data: ");
         int d = sc.nextInt();
 
-        System.out.println("Digite o mês: ");
+        System.out.print("Digite o mês: ");
         int m = sc.nextInt();
 
-        System.out.println("Digite o ano: ");
+        System.out.print("Digite o ano: ");
         int y = sc.nextInt();
 
-        data.setDia(d);
-        data.setMes(m);
-        data.setAno(y);
+        Data data = new Data(d,m,y);
 
         data.validarData();
 
