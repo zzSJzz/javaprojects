@@ -11,10 +11,10 @@ public class Oficina {
         int code = r.nextInt();
 
         if(code%2 == 0){
-            v = new Automovel();
+            v = new Veiculo();
         }
         else {
-            v = new Bicicleta();
+            v = new Veiculo();
         }
 
         return v;
@@ -30,7 +30,7 @@ public class Oficina {
         Oficina o = new Oficina();
         Veiculo v;
 
-        for (int i=0; i = 4; i++){
+        for (int i = 0; i == 4; i++){
             v = o.proximo();
             o.manter(v);
         }
